@@ -553,7 +553,7 @@
 
 
         /* =========================================================
-           SOUNDCLOUD PLAYLIST — IMPORTANTE
+           SOUNDCLOUD PLAYLIST
         ========================================================= */
 
         .playlist-player .soundcloud-player {
@@ -609,7 +609,7 @@
                 minmax(300px, 30%)
                 minmax(0, 70%);
 
-            align-items: start;
+            align-items: stretch;
 
             background:
                 rgba(0, 0, 0, 0.42);
@@ -651,13 +651,17 @@
 
             width: 100%;
 
-            aspect-ratio: 1 / 1;
-
-            height: auto;
-
+            min-width: 0;
             min-height: 0;
 
-            align-self: start;
+            height: 100%;
+
+            align-self: stretch;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
 
             overflow: hidden;
 
@@ -675,7 +679,11 @@
 
             object-fit: contain;
 
-            object-position: center;
+            object-position: center center;
+
+            display: block;
+
+            margin: auto;
 
             opacity: 0;
 
@@ -1452,6 +1460,8 @@
             .release-artwork {
                 min-height: 0;
 
+                height: auto;
+
                 aspect-ratio: 1 / 1;
             }
 
@@ -1757,10 +1767,6 @@
                     <div class="player-platform">
                         SOUNDCLOUD
                     </div>
-
-                    <!-- =================================================
-                         SOUNDCLOUD PLAYLIST COMPLETA
-                    ================================================== -->
 
                     <iframe
                         class="soundcloud-player"
@@ -2208,11 +2214,13 @@
                             SPOTIFY
                         </div>
 
+                        <!-- BOOSTED — NUEVO TRACK -->
+
                         <iframe
-                            class="spotify-track spotify-album"
-                            src="https://open.spotify.com/embed/album/4OOtxOtCmYI8lNdbMeXOZt?utm_source=generator&theme=0"
+                            class="spotify-track"
+                            src="https://open.spotify.com/embed/track/3aAmW5BfsNap3Pf4vXIeOA?utm_source=generator&theme=0"
                             width="100%"
-                            height="152"
+                            height="80"
                             frameborder="0"
                             allowfullscreen=""
                             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
