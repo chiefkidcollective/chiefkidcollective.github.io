@@ -70,10 +70,6 @@
 
             z-index: -5;
 
-            /*
-             * Fondo más visible:
-             * sin blur y con brillo prácticamente natural.
-             */
             filter:
                 blur(0px)
                 brightness(0.88)
@@ -92,10 +88,6 @@
 
             z-index: -4;
 
-            /*
-             * Capa muy ligera para que el texto
-             * siga siendo legible sin esconder el video.
-             */
             background:
                 rgba(0, 0, 0, 0.16);
 
@@ -559,10 +551,28 @@
             overflow: hidden;
         }
 
+
+        /* =========================================================
+           SOUNDCLOUD PLAYLIST — IMPORTANTE
+        ========================================================= */
+
         .playlist-player .soundcloud-player {
-            height: 130px;
-            min-height: 130px;
+            width: 100%;
+
+            height: 300px;
+            min-height: 300px;
+
+            display: block;
+
+            border: none;
+
+            overflow: hidden;
         }
+
+
+        /* =========================================================
+           SPOTIFY FEATURED PLAYLIST
+        ========================================================= */
 
         .playlist-player .spotify-player {
             width: 100%;
@@ -1407,6 +1417,11 @@
                 padding: 30px;
             }
 
+            .playlist-player .soundcloud-player {
+                height: 300px;
+                min-height: 300px;
+            }
+
             .playlist-player .spotify-player {
                 height: 152px;
                 min-height: 152px;
@@ -1546,6 +1561,11 @@
             .soundcloud-player {
                 height: 110px;
                 min-height: 110px;
+            }
+
+            .playlist-player .soundcloud-player {
+                height: 300px;
+                min-height: 300px;
             }
 
             .spotify-track {
@@ -1703,7 +1723,7 @@
 
             <div
                 class="playlist-feature"
-                data-soundcloud="https://soundcloud.com/chiefkidmusic/sets/chiefkid-files?si=c979200ffe64437392dc3ecb1f54e0cf&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+                data-soundcloud="https://soundcloud.com/chiefkidmusic/sets/chiefkid-files"
             >
 
                 <div
@@ -1738,12 +1758,16 @@
                         SOUNDCLOUD
                     </div>
 
+                    <!-- =================================================
+                         SOUNDCLOUD PLAYLIST COMPLETA
+                    ================================================== -->
+
                     <iframe
                         class="soundcloud-player"
                         scrolling="no"
                         frameborder="no"
                         allow="autoplay"
-                        src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fchiefkidmusic%2Fsets%2Fchiefkid-files%3Fsi%3Dc979200ffe64437392dc3ecb1f54e0cf%26utm_source%3Dclipboard%26utm_medium%3Dtext%26utm_campaign%3Dsocial_sharing&color=%23000000&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"
+                        src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fchiefkidmusic%2Fsets%2Fchiefkid-files&color=%23000000&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"
                     ></iframe>
 
 
